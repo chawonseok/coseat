@@ -3,5 +3,20 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+	<display-name>Archetype Created Web Application</display-name>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:config/spring/context-*.xml</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>gag</servlet-name>
+		<display-name>gag</display-name>
+		<description></description>
+		<servlet-class>gag</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>gag</servlet-name>
+		<url-pattern>/gag</url-pattern>
+	</servlet-mapping>
 </web-app>
+
