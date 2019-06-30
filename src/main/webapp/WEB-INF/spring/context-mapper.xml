@@ -11,16 +11,15 @@
 	http://www.springframework.org/schema/mvc
     http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <context:component-scan base-package="com.web.controller" />
-	<bean id="sqlSession"
-		class="org.mybatis.spring.SqlSessionFactoryBean">
+	<!-- Mybatis SessionFactory -->
+	<bean name="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations"
-			value="/coseat_main/src/main/java/com/web/dao/mybatis/mapper/*.xml" />
+		<property name="mapperLocations" value="classpath:com/web/dao/mybatis/mapper/*.xml"></property>
 	</bean>
-	<bean id="sqlSessionTemplate"
-		class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg index="0" ref="sqlSession" />
-	</bean>
+	  <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+      <constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
+   </bean>
+	
 	
 	<bean name="ExampleDao" class="com.web.dao.mybatis.MyBatisexampleDao">
 		<property name="sqlSession" ref="sqlSession"></property>
