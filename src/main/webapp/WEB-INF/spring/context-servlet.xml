@@ -8,23 +8,9 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd 
 	http://www.springframework.org/schema/context 
 	http://www.springframework.org/schema/context/spring-context.xsd
-	http://www.springframework.org/schema/mvc
-    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-    <context:component-scan base-package="com.web.controller" />
-	<bean id="sqlSession"
-		class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations"
-			value="/coseat_main/src/main/java/com/web/dao/mybatis/mapper/*.xml" />
-	</bean>
-	<bean id="sqlSessionTemplate"
-		class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg index="0" ref="sqlSession" />
-	</bean>
-	
-	<bean name="ExampleDao" class="com.web.dao.mybatis.MyBatisexampleDao">
-		<property name="sqlSession" ref="sqlSession"></property>
-	</bean>
+		http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	">
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- Tiles처럼 보이게 꼼수쓰기 -->
@@ -33,7 +19,4 @@
 		<!-- resolver간의 순서를 확인 -->
 		<property name="order" value="2" />
 	</bean> 
-	<mvc:annotation-driven />
-	<mvc:resources location="/resource/" mapping="/resource/**"></mvc:resources>
 </beans>
-

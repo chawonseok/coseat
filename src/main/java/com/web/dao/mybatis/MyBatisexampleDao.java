@@ -12,6 +12,14 @@ public class MyBatisexampleDao implements ExampleDao{
 	@Autowired
 	private SqlSession sqlSession;
 	
+	public SqlSession getSqlSession() {
+		return sqlSession;
+	}
+
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
+
 	public List<Example> get() {
 		ExampleDao exampleDAO=sqlSession.getMapper(ExampleDao.class);
 		List<Example> result = exampleDAO.get();
