@@ -25,7 +25,7 @@ public class MyBatisexampleDao implements ExampleDao {
 	public List<Example> get() {
 
 		ExampleDao exampleDAO=sqlSession.getMapper(ExampleDao.class);
-		<List>Example result = exampleDAO.get();
+		List<Example> result = exampleDAO.get();
 		return null;
 	}
 }
