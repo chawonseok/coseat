@@ -21,7 +21,7 @@ public class exampleController {
 	
 	@RequestMapping(value="example",method=RequestMethod.GET )
 	private String example(String pk_num,String name, int age,Model model) {
-		List<ExampleModel> exam;
+		List<Example> exam;
 		exam = exampleDao.get();
 		model.addAttribute("exam", exam);
 		
