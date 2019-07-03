@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.web.dao.ExampleDao;
+import com.web.dao.model.ExampleModel;
 import com.web.dto.Example;
 
 
@@ -20,7 +21,7 @@ public class exampleController {
 	
 	@RequestMapping(value="example",method=RequestMethod.GET )
 	private String example(String pk_num,String name, int age,Model model) {
-		List<Example> exam;
+		List<ExampleModel> exam;
 		exam = exampleDao.get();
 		model.addAttribute("exam", exam);
 		

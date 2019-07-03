@@ -1,7 +1,5 @@
 package com.web.dao.mybatis;
 
-import java.util.List;
-
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,11 +17,12 @@ public class MyBatisexampleDao implements ExampleDao{
 	public void setSqlSession(SqlSession sqlSession) {
 		this.sqlSession = sqlSession;
 	}
-
-	public List<Example> get() {
+	
+	
+	public <List>Example get() {
 		ExampleDao exampleDAO=sqlSession.getMapper(ExampleDao.class);
-		List<Example> result = exampleDAO.get();
-		return result;
+//		<List>Example result = exampleDAO.get();
+		return null;
 	}
 }
 
