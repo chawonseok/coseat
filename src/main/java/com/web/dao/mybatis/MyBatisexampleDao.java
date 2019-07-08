@@ -8,11 +8,12 @@ import org.springframework.stereotype.Repository;
 
 import com.web.dao.ExampleDao;
 import com.web.dto.Example;
+
 @Repository
-public class MyBatisexampleDao implements ExampleDao{
+public class MyBatisexampleDao implements ExampleDao {
 	@Autowired
 	private SqlSession sqlSession;
-	
+
 	public SqlSession getSqlSession() {
 		return sqlSession;
 	}
@@ -20,12 +21,11 @@ public class MyBatisexampleDao implements ExampleDao{
 	public void setSqlSession(SqlSession sqlSession) {
 		this.sqlSession = sqlSession;
 	}
-	
+
 	public List<Example> get() {
+
 		ExampleDao exampleDAO=sqlSession.getMapper(ExampleDao.class);
 		List<Example> result = exampleDAO.get();
 		return result;
 	}
 }
-
-

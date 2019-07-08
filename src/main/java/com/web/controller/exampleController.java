@@ -13,18 +13,21 @@ import com.web.dto.Example;
 
 
 @Controller
-@RequestMapping("/example/*")
+@RequestMapping("/*")
 public class exampleController {
+	
 	@Autowired
 	private ExampleDao exampleDao;
 	
+	
+	
 	@RequestMapping(value="example",method=RequestMethod.GET )
-	private String example(String pk_num,String name, int age,Model model) {
+	private String example(String pk_num,String name, String age,Model model) {
 		List<Example> exam;
 		exam = exampleDao.get();
 		model.addAttribute("exam", exam);
 		
-		return "example.example";
+		return "example";
 		// TODO Auto-generated method stub
 
 	} 
