@@ -19,7 +19,7 @@
 		<property name="driverClassName"
 
 			value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://18.222.28.225/coseat" />
+		<property name="url" value="jdbc:mysql://52.79.241.252/coseat" />
 		<property name="username" value="coseat_user" />
 		<property name="password" value="123456789!" />
 
