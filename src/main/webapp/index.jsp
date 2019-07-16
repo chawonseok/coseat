@@ -59,14 +59,14 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div class="wrap">
+<div class="wrap"> <!--  전체 화면 랩  -->
   <div class="hero hero-home">
-
-    <div class="main-menu">
+    <div class="main-menu"> <!--  메인 메뉴 -->
       <header class="container main-header">
         <div class="logo-heading">
           <a href="/">
             <div class="logo">
+            <h1> Coseat Main</h1> <!-- 제목, 클릭시 메인페이지 링크예정 -->
               <img src="/assets/images/logo-white.svg?v=5935e1c" alt="Slido logo" class="logo-light" />
               <img src="/assets/images/logo-dark.svg?v=7568c71" alt="Slido logo" class="logo-dark" />
             </div>
