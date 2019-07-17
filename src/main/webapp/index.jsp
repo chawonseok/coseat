@@ -1,65 +1,12 @@
-
-
 <!DOCTYPE html>
-<html lang="en-US">
 <head>
   <meta charset="utf-8">
-  <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
-
-  <!-- Meta Tags -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Slido is an audience interaction tool for meetings, events and conferences. It offers interactive Q&A, live polls and insights about your audience.">
-  <meta name="keywords" content="slido, sli.do, audience, interaction, Q&amp;A, questions, answers, polls, polling, presentations, conferences, events, meetings, live slides, eventprof, web app, event technology, create a poll, live polls, audience response system, live poll results, create poll">
-  <meta name="robots" content="index, follow">
-
-
   <title>Coseat-competition for your seat</title>
-  <!-- CSS -->
-  <link rel="stylesheet" href="/build/styles/style.min.css?v=c5084dc">
-  <link rel="canonical" href="https://www.sli.do/">
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicons/apple-icon-57x57.png?v=3123096">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/apple-icon-60x60.png?v=6dc7dcb">
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicons/apple-icon-72x72.png?v=0b0e7ed">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicons/apple-icon-76x76.png?v=46f89c2">
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicons/apple-icon-114x114.png?v=db953ce">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicons/apple-icon-120x120.png?v=3f641a5">
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicons/apple-icon-144x144.png?v=8eda7ca">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicons/apple-icon-152x152.png?v=bcb826b">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-icon-180x180.png?v=c7ff8e4">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/android-icon-192x192.png?v=e648233">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png?v=1224d6d">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicons/favicon-96x96.png?v=061f42d">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png?v=ab82a21">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Playfair+Display|Lato:400,900" rel="stylesheet">
-
-  <script type="text/javascript">
-    HP = {};
-    var CONFIG = (function() {
-      var config = {
-        API_BASE_URL: "https://api.sli.do/v0.5",
-        SLACK_API_BASE_URL: "https://slack.sli.do/api/v1",
-        SLACK_API_CLIENT_ID: "2184744251.147421034129",
-        APP_BASE_URL: "https://app.sli.do",
-        AUTH_TOKEN_NAME: "slido_production_auth_token",
-        COOKIES_PATH: "/",
-        COOKIES_DOMAIN: ".sli.do",
-        COOKIES_SECURE: "1",
-        ON_PRODUCTION: JSON.parse("true")
-      };
-      return config
-    })();
-    HP.CONFIG = CONFIG;
-  </script>
 </head>
 
 <body ng-app="homePage" class="page-home">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRJ3FC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<div class="wrap"> <!--  전체 화면 랩  -->
+<div class="wrap"> <!-- whole page  -->
   <div class="hero hero-home">
     <div class="main-menu"> <!--  메인 메뉴 -->
       <header class="container main-header">
@@ -223,57 +170,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>The Ultimate Q&amp;A and Polling Platform for Company Meetings and Events</h3>
         </div>
       </div>
-
-      <div class="m-top-6 hidden-xs hidden-sm"></div>
-      <div class="m-top-2 visible-xs visible-sm"></div>
-      <div class="big-buttons">
-        <div class="big-buttons__join-wrap display-flex flex-dir-column align-items-center" ng-controller="joinEventCtrl as vm">
-          <form ng-submit="vm.submit($event, 'eventValueMain')" id="joinFormMain">
-            <div class="join-group" ng-class="{'join-group--pending': vm.isSubmitting}">
-              <div class="join-group__addon">#</div>
-              <input
-                autocorrect="off"
-                autocapitalize="off"
-                name="search"
-                id="eventValueMain"
-                ng-model="vm.eventCode"
-                ng-change="vm.eventsAutocomplete()"
-                type="text"
-                ng-blur="vm.inputFocus=false;"
-                ng-focus="vm.inputFocus=true;"
-                maxlength="32"
-                class="join-group__event-code"
-                aria-label="Enter event code"
-                placeholder="Enter event code"
-                autocomplete="off">
-              <div class="join-group__submit">
-                <button id="submit" value="Submit" type="submit" class="join-group__button">
-                  <span class="join-group__join-label">Join</span>
-                  <span class="spinner inverted spinner-md"></span>
-                </button>
-              </div>
-            </div>
-            <div class="join-group__label" ng-class="vm.inputFocus ? 'join-focused' : 'join-blur'">By using this app I agree to the <a href="/acceptable-use" class="link--white"><u>Acceptable Use Policy</u></a></div>
-          </form>
-        </div>
-        <div class="big-buttons__or-wrap hidden-xs hidden-sm">
-          or
-        </div>
-        <div class="m-top-1 visible-sm"></div>
-        <div class="big-buttons__create-wrap hidden-xs">
-          <div class="create-group">
-            <a href="/accounts/signup" class="create-group__button" data-redirect="/admin/events" data-tracking="hero_sign-up">
-              Sign up, it’s free
-            </a>
-            <div class="create-group__demo">
-              <a href="/request-demo" class="link--white fs16"><u>schedule a demo</u></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="m-top-2 hidden-xs"></div>
-      <div class="m-top-6 visible-xs"></div>
 
       <div class="scroll-container">
         <a href="#first-section">
@@ -736,40 +632,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div><!-- .row -->
     </div>
   </section>
-
-  <section class="video-player">
-    <!-- Video Modal -->
-    <div id="videoUrlModal" class="modal modal--video fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog modal-dialog--video" role="document">
-        <div class="modal-content modal-content--video">
-          <div class="modal-header modal-header--video">
-            <button type="button" class="close close--video" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body modal-body--video">
-            <div class="flex-video widescreen">
-              <div id="url-player">
-                <!-- This div will be replaced with iframe via YouTube API -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- //Video Modal -->
-  </section>
-
-<div class="green-bg">
-  <section class="container content-section" data-tracking="footer_get-started">
-    <div class="row description-row">
-      <div class="col-md-12 text-center">
-        <h3>Let's make your next event<br class="visible-lg"> <span class="strong-heading">more interactive.</span></h3>
-        <a href="/accounts/signup" data-redirect="/admin/events" data-tracking="footer_get-started"><button type="button" class="btn btn-sli btn-white btn-shadow m-top-2"><span class="trans-span text-uppercase">Get started</span></button></a>
-      </div>
-    </div>
-  </section>
-</div>
 
     <div class="gray-line-top"></div>
 
