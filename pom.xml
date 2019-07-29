@@ -92,9 +92,6 @@
 
 	</dependencies>
 
-
-
-
 	<build>
 		<finalName>coseat_main</finalName>
 		<plugins>

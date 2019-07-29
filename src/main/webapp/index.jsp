@@ -17,7 +17,7 @@ display:inline;
 color:#48B
 }
 #nav-bar{
-  position:;
+  position:absolute;
   top: var(--header-mid);
   margin-left:25%;
 }
@@ -52,26 +52,17 @@ padding: 10px;
 <title>Coseat - Conquer your seat</title>
 </head>
 <body>
-<section id="header">
-<div id = "main-title">Coseat</div>
-<ul id ="nav-bar">
-<li class="nav">Product</li>
-<li class="nav">Customer</li>
-<li class="nav">Pricing</li>
-<li class="nav">Resources</li>
-</ul>
-
-<div id="login-area">
-<a href="accounts/login" class="login-button">Log in</a>
-<a href="accounts/" class="login-button">Sign up</a>
+<div id="nav">
+  	<div id="header"><jsp:include page="/WEB-INF/views/Logo.jsp"/></div>   
+	<div id="nav-var"><jsp:include page="/WEB-INF/views/Nav-bar.jsp"/></div>
+	<div id="login-area"><jsp:include page="/WEB-INF/views/Login-bar.jsp"/></div>  
 </div>
-</section>
-<h1>Every Seat Matters</h1>
-<h3> Be the Conqerer of the seat</h3>
-<input >
-<button>Join</button>
+<div><jsp:include page="/WEB-INF/views/body.jsp"/></div>
+
+
 </body>
 <footer>
-<div id="copyright">All rights reserved 2019 Coseat</div>
+<div><jsp:include page="/WEB-INF/views/foot.jsp"/></div>
+
 </footer>
 </html>
