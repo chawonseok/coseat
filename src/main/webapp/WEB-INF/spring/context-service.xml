@@ -33,7 +33,10 @@
 	  <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
       <constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
    </bean>	
-	<bean name="ExampleDao" class="com.web.dao.mybatis.MyBatisexampleDao">
+	<bean name="ExampleDao" class="com.web.dao.mybatis.MyBatisExampleDao">
+		<property name="sqlSession" ref="sqlSession"></property>
+	</bean>
+	 <bean name="SeatDao" class="com.web.dao.mybatis.MyBatisSeatDao">
 		<property name="sqlSession" ref="sqlSession"></property>
 	</bean>
 </beans>

@@ -10,7 +10,7 @@ import com.web.dao.ExampleDao;
 import com.web.dto.Example;
 
 @Repository
-public class MyBatisexampleDao implements ExampleDao {
+public class MyBatisExampleDao implements ExampleDao {
 	@Autowired
 	private SqlSession sqlSession;
 
