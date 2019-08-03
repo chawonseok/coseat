@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/*")
-public class HsController {
+public class OcuppyController {
 	
-	@RequestMapping(value="hs",method=RequestMethod.GET )
+	@RequestMapping(value="occupychk",method=RequestMethod.GET )
 	private String example() {
 		System.out.println("³ª¿Í¶ù");
 		return "template";
