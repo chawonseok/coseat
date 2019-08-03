@@ -15,7 +15,7 @@ public class OcuppyController {
 	
 	@RequestMapping(value="occupychk",method=RequestMethod.GET )
 	private String example() {
-		System.out.println("³ª¿Í¶ù");
+		
 		return "template";
 		// TODO Auto-generated method stub
 
