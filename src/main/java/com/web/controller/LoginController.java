@@ -1,5 +1,8 @@
 package com.web.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,18 +13,18 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 @RequestMapping("/*")
 public class LoginController {
 	
-	@RequestMapping(value="/", method = RequestMethod.GET )
-	private void SetSessionAttribute(Model model) {
-		model.addAttribute("usercode",-1);
+	@RequestMapping(value="/main", method = RequestMethod.GET )
+	private String SetSessionAttribute(Model model) {
+		int val = -1;
+		model.addAttribute("mainUrl","main.jsp");
+		model.addAttribute("usercode",val); 
 		
+		return "template";
 	}
 	
 	@RequestMapping(value="login", method = RequestMethod.GET )
 	private String login(Model model) {
-		
-//		HttpRequest request;
 		model.addAttribute("mainUrl", "login.jsp");
-//		request.setAttribute();
 		System.out.println("login function In");
 		return "template";
 	}
