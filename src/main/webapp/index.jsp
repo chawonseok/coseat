@@ -1,5 +1,5 @@
 <html>
-<meta charset="utf-8">
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <head>
 <style type="text/css">
   :root{
@@ -57,9 +57,23 @@ padding: 10px;
 	<div id="nav-var"><jsp:include page="/WEB-INF/views/Nav-bar.jsp"/></div>
 	<div id="login-area"><jsp:include page="/WEB-INF/views/Login-bar.jsp"/></div>  
 </div>
-<div><jsp:include page="/WEB-INF/views/body.jsp"/></div>
 
+<form action="post">
+<table>
+<tr>
+<td>방코드</td>
+<td><input type="text"></td>
+<td rowspan="2"><input type="button" value="들어가기"></td>
+</tr>
+<tr>
+<td>닉네임</td>
+<td><input type="text"></td>
+</tr>
 
+</table>
+</form>
+
+<%-- <div><jsp:include page="/WEB-INF/views/body.jsp"/></div> --%>
 </body>
 <footer>
 <div><jsp:include page="/WEB-INF/views/foot.jsp"/></div>
