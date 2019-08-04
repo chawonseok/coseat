@@ -1,16 +1,18 @@
 package com.web.controller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.catalina.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 
 
 @Controller
+@SessionAttributes("usercode")
+
 @RequestMapping("/*")
 public class OcuppyController {
 	
@@ -20,10 +22,19 @@ public class OcuppyController {
 		
 		return "template";	
 	}
-	
-		
 	@RequestMapping(value="roomin",method=RequestMethod.GET)
-	private String roomin(Model model) {
+	private String roomin(@ModelAttribute(value="usercode") int usercode, Model model) {
+		
+		//방번호가 없는 경우
+		
+		
+		if(usercode<0) {//비회원일 경우,
+			
+		}else {//회원일 경우
+			
+		}
+		
+		
 		model.addAttribute("mainUrl", "occupy/alert.jsp");
 		model.addAttribute("goUrl", "roominView");
 		
