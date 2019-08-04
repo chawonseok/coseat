@@ -58,7 +58,7 @@ padding: 10px;
 	<div id="login-area"><jsp:include page="/WEB-INF/views/Login-bar.jsp"/></div>  
 </div>
 
-<form action="post">
+<form action="roomin" method="post" >
 <table>
 <tr>
 <td>방코드</td>
@@ -69,7 +69,6 @@ padding: 10px;
 <td>닉네임</td>
 <td><input type="text"></td>
 </tr>
-
 </table>
 </form>
 
