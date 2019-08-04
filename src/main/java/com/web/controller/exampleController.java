@@ -19,8 +19,6 @@ public class exampleController {
 	@Autowired
 	private ExampleDao exampleDao;
 	
-	
-	
 	@RequestMapping(value="example",method=RequestMethod.GET )
 	private String example(String pk_num,String name, String age,Model model) {
 		List<Example> exam;
