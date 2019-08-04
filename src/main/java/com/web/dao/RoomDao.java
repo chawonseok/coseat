@@ -1,5 +1,9 @@
 package com.web.dao;
 
-public interface RoomDao {
+import java.util.List;
 
+import com.web.dto.Room;
+
+public interface RoomDao {
+	List<Room> get();
 }
