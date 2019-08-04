@@ -1,29 +1,30 @@
 package com.web.dto;
 
 public class Seat {
+	
 	public String getSeatId() {
-		return SeatId;
+		return seatId;
 	}
 	public void setSeatId(String seatId) {
-		SeatId = seatId;
+		this.seatId = seatId;
 	}
 	public String getRoomId() {
-		return RoomId;
+		return roomId;
 	}
 	public void setRoomId(String roomId) {
-		RoomId = roomId;
+		this.roomId = roomId;
 	}
 	public String getNickName() {
-		return NickName;
+		return nickName;
 	}
 	public void setNickName(String nickName) {
-		NickName = nickName;
+		this.nickName = nickName;
 	}
 	public String getUserCode() {
-		return UserCode;
+		return userCode;
 	}
 	public void setUserCode(String userCode) {
-		UserCode = userCode;
+		this.userCode = userCode;
 	}
 	public String getX() {
 		return x;
@@ -43,10 +44,10 @@ public class Seat {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	private String SeatId;
-	private String RoomId;
-	private String NickName;
-	private String UserCode;
+	private String seatId;
+	private String roomId;
+	private String nickName;
+	private String userCode;
 	private String x;
 	private String y;
 	private String status;
