@@ -58,12 +58,12 @@ padding: 10px;
 	<div id="login-area"><jsp:include page="/WEB-INF/views/Login-bar.jsp"/></div>  
 </div>
 
-<form action="roomin" method="post" >
+<form action="roomin" method="get" >
 <table>
 <tr>
 <td>방코드</td>
 <td><input type="text"></td>
-<td rowspan="2"><input type="button" value="들어가기"></td>
+<td rowspan="2"><input type="submit" value="들어가기"></td>
 </tr>
 <tr>
 <td>닉네임</td>

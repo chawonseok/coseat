@@ -22,10 +22,18 @@ public class OcuppyController {
 	}
 	
 		
-	@RequestMapping(value="roomin",method=RequestMethod.POST )
+	@RequestMapping(value="roomin",method=RequestMethod.GET)
 	private String roomin(Model model) {
 		model.addAttribute("mainUrl", "occupy/alert.jsp");
-		model.addAttribute("goUrl", "roominView.jsp");
+		model.addAttribute("goUrl", "roominView");
+		
+		return "template";
+		// TODO Auto-generated method stub
+	} 
+	
+	@RequestMapping(value="roominView",method=RequestMethod.GET)
+	private String roominView(Model model) {
+		model.addAttribute("mainUrl", "occupy/roominView.jsp");
 		
 		return "template";
 		// TODO Auto-generated method stub
