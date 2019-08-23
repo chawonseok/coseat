@@ -6,7 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
+
+import com.web.dto.User;
 
 
 
@@ -17,10 +20,11 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 @RequestMapping("/*")
 public class OcuppyController {
 	
-	
-	
 	@RequestMapping(value="occupychk",method=RequestMethod.GET )
-	private String occupychk() {
+	private String occupychk(@SessionAttribute("user") User user) {
+		
+		
+		
 		
 		
 		return "template";	
