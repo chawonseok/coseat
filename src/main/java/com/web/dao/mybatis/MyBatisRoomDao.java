@@ -31,5 +31,15 @@ public class MyBatisRoomDao implements RoomDao {
 		
 		return result;
 	}
+	
+	@Override
+	public boolean chkRoomNo() {
+		// TODO Auto-generated method stub
+		
+		RoomDao roomdao = sqlSession.getMapper(RoomDao.class);
+		
+		return roomdao.chkRoomNo();
+	}
+	
 
 }

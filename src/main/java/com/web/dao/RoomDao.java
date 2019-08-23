@@ -6,4 +6,5 @@ import com.web.dto.Room;
 
 public interface RoomDao {
 	List<Room> get();
+	boolean chkRoomNo();
 }

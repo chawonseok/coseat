@@ -21,20 +21,20 @@ import com.web.dto.User;
 public class OcuppyController {
 	
 	@RequestMapping(value="occupychk",method=RequestMethod.GET )
-	private String occupychk(@SessionAttribute("user") User user) {
-		
-		
-		
-		
+	private String occupychk() {
+	
 		
 		return "template";	
 	}
 	@RequestMapping(value="roomin",method=RequestMethod.GET)
-	private String roomin(int usercode, Model model) {
+	private String roomin(@SessionAttribute("user") User user, int roomId, Model model) {
 		
 		//방번호가 없는 경우
-
-		if(usercode<0) {//비회원일 경우,
+		
+		
+		
+		
+		if(user.getUserCode()<0) {//비회원일 경우,
 			
 		}else {//회원일 경우
 			
