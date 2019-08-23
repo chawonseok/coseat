@@ -11,10 +11,13 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 
 @Controller
-@SessionAttributes("usercode")
+@SessionAttributes({"user","ip"})
+
 
 @RequestMapping("/*")
 public class OcuppyController {
+	
+	
 	
 	@RequestMapping(value="occupychk",method=RequestMethod.GET )
 	private String occupychk() {
@@ -23,11 +26,10 @@ public class OcuppyController {
 		return "template";	
 	}
 	@RequestMapping(value="roomin",method=RequestMethod.GET)
-	private String roomin(@ModelAttribute(value="usercode") int usercode, Model model) {
+	private String roomin(int usercode, Model model) {
 		
 		//방번호가 없는 경우
-		
-		
+
 		if(usercode<0) {//비회원일 경우,
 			
 		}else {//회원일 경우
