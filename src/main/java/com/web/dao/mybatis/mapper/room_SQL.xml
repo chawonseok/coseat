@@ -4,4 +4,7 @@
 	<select id="get" resultType="com.web.dto.Room">
 			SELECT * FROM Room
 	</select>
+	<select id="chkRoomNo" resultType="com.web.dto.Room">
+			SELECT * FROM Room where roomId = #{roomid}
+	</select>
 </mapper>

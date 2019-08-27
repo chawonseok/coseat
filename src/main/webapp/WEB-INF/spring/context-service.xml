@@ -39,6 +39,9 @@
 	 <bean name="SeatDao" class="com.web.dao.mybatis.MyBatisSeatDao">
 		<property name="sqlSession" ref="sqlSession"></property>
 	</bean>
+	<bean name="RoomDao" class="com.web.dao.mybatis.MyBatisRoomDao">
+		<property name="sqlSession" ref="sqlSession"></property>
+	</bean>
 </beans>
 
 

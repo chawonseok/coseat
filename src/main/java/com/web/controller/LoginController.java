@@ -24,7 +24,7 @@ public class LoginController {
 	
 	@RequestMapping(value="login", method = RequestMethod.GET )
 	private String login(Model model) {
-		model.addAttribute("mainUrl", "login.jsp");
+		model.addAttribute("mainUrl", "login/login.jsp");
 		System.out.println("login function In");
 		return "template";
 	}
